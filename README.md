@@ -4,4 +4,10 @@ Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation) 
 
 ## First, an example of what we are building.
 
+In your Blade template, the navigation will render like this (and you can have total control over the markup):
+
 ![](https://github.com/sjardim/filament-tricks/blob/main/screenshots/filament-navigation-00.png)
+
+And here is the navigation built inside the Filament Admin, using the aforemention plugin. 
+
+![Navigation on Filament Admin](https://github.com/sjardim/filament-tricks/blob/main/screenshots/filament-navigation-01.png)

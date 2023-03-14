@@ -36,6 +36,10 @@ Copy this file to your project: `app/View/Composers/NavigationComposer.php`
 
 These files will add two new item types, a "Link" for internal links and a "Page link" for pages created with Z3d0X's [Fabrication plugin](https://filamentphp.com/plugins/fabricator), that you can delete, if you don't use the plugin in your project.
 
+![Existing page link](https://raw.githubusercontent.com/sjardim/filament-tricks/main/screenshots/filament-navigation-02.png)
+
+![Internal link with description](https://raw.githubusercontent.com/sjardim/filament-tricks/main/screenshots/filament-navigation-03.png)
+
 ```php
 /* ViewServiceProvider.php */
 

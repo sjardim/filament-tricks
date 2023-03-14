@@ -1,6 +1,8 @@
 # Build a global navigation with the Navigation plugin
 
-Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation) is powerful, but you may have questions on how to use it, so here I want to show you how to build a global navigation for your front end quickly.
+Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation) is powerful, but you may have questions on how to use it.
+
+I want to show you how to quickly build a global navigation for your front end.
 
 Get the files on [GitHub](https://github.com/sjardim/filament-tricks)
 

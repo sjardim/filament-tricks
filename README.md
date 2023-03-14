@@ -2,13 +2,15 @@
 
 Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation) is powerful, but you may have questions on how to use it, so here I want to show you how to build a global navigation for your front end quickly.
 
+Get the files on [GitHub](https://github.com/sjardim/filament-tricks)
+
 ## First, an example of what we are building.
 
 In your Blade template, the navigation will render like this (and you can have total control over the markup):
 
 ![Blade view](https://raw.githubusercontent.com/sjardim/filament-tricks/main/screenshots/filament-navigation-00.png)
 
-And here is the navigation built inside the Filament Admin, using the aforemention plugin. 
+And here is the navigation built inside the Filament Admin using the aforementioned plugin. 
 
 ![Navigation on Filament Admin](https://raw.githubusercontent.com/sjardim/filament-tricks/main/screenshots/filament-navigation-01.png)
 
@@ -16,17 +18,17 @@ And here is the navigation built inside the Filament Admin, using the aforementi
 
 ### Step 1
 
-On you Laravel project using the Filament Admin, install Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation).
+On your Laravel project using the Filament Admin, install Ryan Chandler's [Navigation plugin](https://filamentphp.com/plugins/navigation).
 
-The plugin comes with a default External Link type, but we can create new ones, for internal links for instance, and that's what we gonna do.
+The plugin comes with a default External Link type, but we can create new ones for internal links, for instance, and that's what we gonna do.
 
 ### Step 2
 
-To have a global navigation, a "Main Menu" that you can use on all of your Blade views, one way is to use [Laravel's View Composers[(https://laravel.com/docs/10.x/views#view-composers)
+To have a "Main Menu" that you can use on all of your Blade views, one way is to use [Laravel's View Composers](https://laravel.com/docs/10.x/views#view-composers)
 
 We will need to create 2 files:
 
-1 - A file that will hold all of our new *item types* for the Navigation plugin. See this file on the Providers folder on this project. Also, don't forget to add a reference to it in your project's config/app.php file. 
+1 - A file that will hold all of our new *item types* for the Navigation plugin. See this file in the Providers folder on this project. Also, don't forget to add a reference to it in your project's config/app.php file. 
 
 Copy this file to your project: `app/Providers/ViewServiceProvider.php` 
 

@@ -51,7 +51,56 @@ public function boot(): void
 }
 ```
 
-### Step 3 - Optional
+### Step 3 - Blade View
+
+In your blade view, you can render the menu like this (a quick an dirty way): 
+```blade
+
+<ul class="prose p-4 mb-12">
+    @foreach($mainMenu->items as $item)
+        <li class="border-b border-primary-300 pb-4">
+            <a href="{{ url($item['data']['url']) }}"
+               @if($item['type'] === 'external-link')
+                   target="{{ $item['data']['target']}}"
+                @endif
+            >
+                @isset($item['data']['title'])
+                    {{$item['data']['title']}}
+                @else
+                    {{ $item['label'] }}
+                @endisset
+
+                @isset($item['data']['description'])
+                    <span class="block text-xs">{{$item['data']['description']}}</span>
+                @endisset
+
+                @if($item['type'] === 'external-link')
+                    <x-heroicon-o-external-link class="inline-block w-4 h-4" />
+                @endif
+            </a>
+
+            @if($item['children'])
+                <ul>
+                @foreach($item['children'] as $child)
+                    <li>
+                        <a href="{{ url($item['data']['url']. '/' . $child['data']['url']) }}">
+                            @isset($child['data']['title'])
+                                {{$child['data']['title']}}
+                            @else
+                                {{ $child['label'] }}
+                            @endisset
+                        </a>
+                    </li>
+                @endforeach
+                </ul>
+            @endif
+        </li>
+    @endforeach
+</ul>
+
+```
+
+### Step 4 - Optional
 
 If you are using Z3d0X's [Fabrication plugin](https://filamentphp.com/plugins/fabricator), you can create a custom `item type` for the navigation that renders the pages slugs. But **be aware** that if you change the page slug, you will need also to update the navigation. **It will not update automatically.**
 
